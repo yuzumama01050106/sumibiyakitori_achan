@@ -1,0 +1,97 @@
+@use 'variables' as v;
+@use 'mixin' as m;
+
+
+/* =========================
+  メイン
+========================= */
+.menu-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    @include m.sp {
+        padding: 40px 15px;
+    }
+    h2 {
+        text-align: center;
+        font-size: clamp(22px, 3vw, 30px);
+        margin-bottom: 50px;
+        letter-spacing: 0.12em;
+    }
+  
+    /* =========================
+  メニューエリア
+  ========================= */
+    .menu-inner {
+        > div {
+            margin-bottom: 35px;
+            padding: 20px 25px;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 14px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: 0.3s;
+        }
+    }
+    
+    /* タイトル */
+    .menu-title {
+        font-size: 20px;
+        margin-bottom: 15px;
+        padding-left: 12px;
+        border-left: 4px solid v.$brown;
+        letter-spacing: 0.05em;
+        @include m.sp {
+            font-size: 18px;
+        }
+    }
+    
+    /* =========================
+    メニューリスト
+    ========================= */
+    .menu-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px 25px;
+        @include m.sp {
+            grid-template-columns: 1fr;
+        }
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 6px;
+            border-bottom: 1px dashed rgba(115, 81, 81, 0.2);
+            transition: 0.2s;
+            .item-name {
+                font-size: 18px;
+                color: v.$brown;
+                @include m.sp {
+                    font-size: 16px;
+                }
+            }
+        
+            .item-price {
+                font-size: 18px;
+                color: v.$brown;
+                white-space: nowrap;
+                @include m.sp {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+    
+    /* =========================
+    ロゴ
+    ========================= */
+    .menu-logo {
+        margin-top: 80px;
+        text-align: center;
+
+        img {
+            width: min(160px, 40%);
+            height: auto;
+            opacity: 1;
+        }
+    }
+}

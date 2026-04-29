@@ -1,0 +1,83 @@
+@use 'variables' as v;
+@use 'mixin' as m;
+
+.access {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    @include m.sp {
+        padding-top: 50px;
+    }
+    .access-head {
+        padding: 30px 0;
+        background: linear-gradient(to bottom, #B71C1C, #2D0A0A);
+        @include m.sp {
+            padding: 5px 0;
+        }
+        h2 {
+            font-size: v.$title;
+            color: v.$white;
+            text-align: center;
+            @include m.sp {
+                font-size: 30px;
+            }
+        }
+        h3 {
+            font-size: v.$sub-title;
+            color: v.$white;
+            text-align: center;
+            &::before,
+            &::after {
+                content: "-";
+                margin:  0 10px;
+            }
+            @include m.sp {
+                font-size: 25px;
+            }
+        }
+    }
+    .access-inner {
+        max-width: 800px;
+        margin: 0 auto;
+        padding-top: 50px;
+        @include m.sp {
+            padding-inline: 20px;
+        }
+        dl {
+            display: flex;
+            flex-wrap: wrap;
+            padding-bottom: 50px;
+            @include m.sp {
+                flex-direction: column;
+            }
+            dt {
+                width: 20%;
+                font-size: v.$text;
+                padding-bottom: 30px;
+                @include m.sp {
+                    width: 100%;
+                    font-size: 20px;
+                    padding-bottom: 0;
+                }
+            }
+            dd {
+                width: 80%;
+                font-size: v.$text;
+                padding-bottom: 30px;
+                @include m.sp {
+                    width: 100%;
+                    font-size: 20px;
+                    padding-bottom: 0;
+                }
+            }
+        }
+        .map-item {
+            width: 100%;
+            max-width: 800px;
+            aspect-ratio: 4 / 3;
+            iframe {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}

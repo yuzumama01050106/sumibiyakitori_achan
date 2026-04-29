@@ -1,0 +1,16 @@
+@charset 'UTF-8';
+
+@use 'variables' as v;
+@use 'mixin' as m;
+@use 'common';
+
+@use 'header';
+@use 'mainvisual';
+@use 'news';
+@use 'about_us';
+@use 'recommend';
+@use 'menu-page';
+@use 'store_information';
+@use 'access';
+@use 'footer';
+

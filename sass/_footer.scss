@@ -1,0 +1,12 @@
+@use 'variables' as v;
+@use 'mixin' as m;
+
+footer {
+    height: 50px;
+    background: linear-gradient(to bottom, #B71C1C, #2D0A0A);
+    p {
+        color: v.$white;
+        text-align: center;
+        line-height: 50px;
+    }
+}

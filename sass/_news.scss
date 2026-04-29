@@ -1,0 +1,58 @@
+@use 'variables' as v;
+@use 'mixin' as m;
+
+.news {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    @include m.sp {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    h2 {
+        font-size: v.$title;
+        color: v.$brown;
+        text-align: center
+    }
+    h3 {
+        font-size: v.$sub-title;
+        color: v.$brown;
+        text-align: center;
+        &::before,
+        &::after {
+            content: "-";
+            margin:  0 10px;
+        }
+    }
+    dl {
+        max-width: 800px;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: 40px;
+        @include m.sp {
+            padding-inline: 20px;
+            flex-direction: column;
+        }
+
+        dt {
+            width: 45%;
+            font-size: v.$text;
+            padding-bottom: 40px;
+            color: v.$brown;
+            @include m.sp {
+                width: 100%;
+                padding-bottom: 10px;
+            }
+        }
+        dd {
+            width: 55%;
+            font-size: v.$text;
+            padding-bottom: 40px;
+            color: v.$brown;
+            @include m.sp {
+                width: 100%;
+                padding-bottom: 10px;
+            } 
+        }
+    }
+}

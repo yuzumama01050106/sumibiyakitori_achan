@@ -1,0 +1,124 @@
+@use 'variables' as v;
+@use 'mixin' as m;
+
+.about-us {
+    width: 100%;
+    .about-us-head {
+        padding: 30px 0;
+        background: linear-gradient(to bottom, #B71C1C, #2D0A0A);
+        @include m.sp {
+            padding: 5px 0;
+        }
+        h2 {
+            font-size: v.$title;
+            color: v.$white;
+            text-align: center;
+            @include m.sp {
+                font-size: 30px;
+            }
+        }
+        h3 {
+            font-size: v.$sub-title;
+            color: v.$white;
+            text-align: center;
+            &::before,
+            &::after {
+                content: "-";
+                margin:  0 10px;
+            }
+            @include m.sp {
+                font-size: 25px;
+            }
+        }
+    }
+    .about-us-inner {
+        padding-top: 150px;
+        max-width: 1100px;
+        width: 100%;
+        margin: 0 auto;
+        @include m.sp {
+            padding-inline: 20px;
+            padding-top: 50px;
+        }
+        .about-shop {
+            display: flex;
+            @include m.sp {
+                flex-direction: column;
+                align-items: center;
+            }
+            img {
+                max-width: 450px;
+                height: 600px;
+                object-fit: cover;
+                @include m.sp {
+                    width: 100%;
+                }
+            }
+            .shop-text {
+                padding-left: 70px;
+                @include m.sp {
+                    padding-left: 0;
+                    padding-top: 30px;
+                }
+                h4 {
+                    font-size: v.$sub-title;
+                    color: v.$brown;
+                    padding-bottom: 50px;
+                    @include m.sp {
+                        padding-bottom: 20px;
+                        font-size: 25px;
+                        padding-bottom: 10px;
+                    }
+                }
+                p {
+                    font-size: v.$text;
+                    color: v.$brown;
+                    @include m.sp {
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+        .about-meal {
+            padding-top: 100px;
+            display: flex;
+            flex-direction: row-reverse;
+            @include m.sp {
+                flex-direction: column;
+                align-items: center;
+                padding-top: 40px;
+            }
+            img {
+                max-width: 450px;
+                height: 600px;
+                object-fit: cover;
+                @include m.sp {
+                    width: 100%;
+                }
+            }
+            .meal-text {
+                padding-right: 70px;
+                @include m.sp {
+                    padding-right: 0;
+                }
+                h4 {
+                    font-size: v.$sub-title;
+                    color: v.$brown;
+                    padding-bottom: 50px;
+                    @include m.sp {
+                        padding-bottom: 10px;
+                        font-size: 25px;
+                        padding-top: 20px;
+                    }
+                }
+                p {
+                    font-size: v.$text;
+                    color: v.$brown;
+                    @include m.sp {
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+}

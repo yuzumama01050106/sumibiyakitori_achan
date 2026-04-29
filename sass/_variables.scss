@@ -1,0 +1,21 @@
+@use 'mixin' as m;
+
+//カラーコード
+$grade-red: #B71C1C;
+$grade-brown: #2D0A0A;
+$white: #F2F2F2;
+$brown: #3E2723;
+
+
+//フォントウェイト
+$normal: medium;
+$bold: bold;
+
+//フォントサイズ
+$nav-li: 28px;
+$main-copy: 28px;
+$title: 36px;
+$sub-title: 32px;
+$copy-text: 32px;
+$text: 24px;
+$footer-text: 20px;
