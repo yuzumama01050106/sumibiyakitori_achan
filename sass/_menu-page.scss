@@ -35,47 +35,67 @@
     
     /* タイトル */
     .menu-title {
-        font-size: 20px;
+        font-size: 18px;
+        margin-top: 40px; // ←追加（これが主役）
         margin-bottom: 15px;
         padding-left: 12px;
         border-left: 4px solid v.$brown;
         letter-spacing: 0.05em;
-        @include m.sp {
-            font-size: 18px;
+
+        &:first-of-type {
+            margin-top: 0; // ←最初だけ詰める
         }
+
+        @include m.sp {
+            font-size: 15px;
+            margin-top: 30px; // SPは少しだけコンパクトに
+        }
+    }
+    .menu-subtitle {
+        padding-bottom: 15px;
     }
     
     /* =========================
     メニューリスト
     ========================= */
+    
     .menu-list {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 12px 25px;
+
         @include m.sp {
             grid-template-columns: 1fr;
         }
+
         .menu-item {
             display: flex;
             justify-content: space-between;
-            align-items: center;
+            align-items: flex-start;
+            gap: 20px;
             padding-bottom: 6px;
             border-bottom: 1px dashed rgba(115, 81, 81, 0.2);
             transition: 0.2s;
+
             .item-name {
-                font-size: 18px;
+                flex: 1;
+                font-size: 15px;
                 color: v.$brown;
+
                 @include m.sp {
-                    font-size: 16px;
+                    font-size: 13px;
                 }
             }
-        
+
             .item-price {
-                font-size: 18px;
+                font-size: 15px;
                 color: v.$brown;
+                text-align: right;
                 white-space: nowrap;
+                line-height: 1.6;
+
                 @include m.sp {
-                    font-size: 16px;
+                    font-size: 13px;
                 }
             }
         }
