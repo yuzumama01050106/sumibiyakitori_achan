@@ -784,15 +784,34 @@ header.open .menu-btn span:nth-child(3) {
   /* タイトル */
 }
 .menu-page .menu-title {
-  font-size: 20px;
-  margin-bottom: 15px;
+  font-size: 18px;
+  margin: 45px 0 15px;
   padding-left: 12px;
   border-left: 4px solid #3E2723;
   letter-spacing: 0.05em;
 }
 @media (max-width: 768px) {
   .menu-page .menu-title {
-    font-size: 18px;
+    font-size: 15px;
+    margin: 32px 0 12px;
+  }
+}
+.menu-page {
+  /* 各ブロックの一番最初のタイトルだけ上余白なし */
+}
+.menu-page .menu-inner > div > .menu-title:first-child {
+  margin-top: 0;
+}
+.menu-page .menu-subtitle {
+  margin-top: -5px;
+  margin-bottom: 15px;
+  padding-left: 16px;
+  font-size: 14px;
+  color: #3E2723;
+}
+@media (max-width: 768px) {
+  .menu-page .menu-subtitle {
+    font-size: 13px;
   }
 }
 .menu-page {
@@ -813,28 +832,32 @@ header.open .menu-btn span:nth-child(3) {
 .menu-page .menu-list .menu-item {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
+  gap: 20px;
   padding-bottom: 6px;
   border-bottom: 1px dashed rgba(115, 81, 81, 0.2);
   transition: 0.2s;
 }
 .menu-page .menu-list .menu-item .item-name {
-  font-size: 18px;
+  flex: 1;
+  font-size: 15px;
   color: #3E2723;
 }
 @media (max-width: 768px) {
   .menu-page .menu-list .menu-item .item-name {
-    font-size: 16px;
+    font-size: 13px;
   }
 }
 .menu-page .menu-list .menu-item .item-price {
-  font-size: 18px;
+  font-size: 15px;
   color: #3E2723;
+  text-align: right;
   white-space: nowrap;
+  line-height: 1.6;
 }
 @media (max-width: 768px) {
   .menu-page .menu-list .menu-item .item-price {
-    font-size: 16px;
+    font-size: 13px;
   }
 }
 .menu-page {
