@@ -34,25 +34,35 @@
     }
     
     /* タイトル */
+
     .menu-title {
         font-size: 18px;
-        margin-top: 40px; // ←追加（これが主役）
-        margin-bottom: 15px;
+        margin: 45px 0 15px;
         padding-left: 12px;
         border-left: 4px solid v.$brown;
         letter-spacing: 0.05em;
 
-        &:first-of-type {
-            margin-top: 0; // ←最初だけ詰める
-        }
-
         @include m.sp {
             font-size: 15px;
-            margin-top: 30px; // SPは少しだけコンパクトに
+            margin: 32px 0 12px;
         }
     }
+
+    /* 各ブロックの一番最初のタイトルだけ上余白なし */
+    .menu-inner > div > .menu-title:first-child {
+        margin-top: 0;
+    }
+
     .menu-subtitle {
-        padding-bottom: 15px;
+        margin-top: -5px;
+        margin-bottom: 15px;
+        padding-left: 16px;
+        font-size: 14px;
+        color: v.$brown;
+
+        @include m.sp {
+            font-size: 13px;
+        }
     }
     
     /* =========================
